@@ -13,13 +13,9 @@ def connect_db():
     return sqlite3.connect(config.DATABASE_NAME)
 
 
-@app.before_request
-def before_request():
-    g.db = connect_db()
-
-
 @app.route('/')
 def hello_world():
-    cursor = g.db.execute('SELECT id, name FROM author;')
+    db_connection = connect_db()
+    cursor = db_connection.execute('SELECT id, name FROM author;')
     authors = [dict(id=row[0], name=row[1]) for row in cursor.fetchall()]
     return render_template('authors.html', authors=authors)

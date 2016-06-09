@@ -12,4 +12,6 @@ def hello_world():
             <h1>Welcome to our Library!</h1>
         </html>
     """
-    return html
+    authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+    # build an <ul> with authors
+    return ul

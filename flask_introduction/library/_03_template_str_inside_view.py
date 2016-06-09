@@ -15,5 +15,4 @@ def hello_world():
         </html>
     """
     rendered_html = render_template_string(html, library_name=library_name)
-    print(rendered_html)
     return rendered_html
