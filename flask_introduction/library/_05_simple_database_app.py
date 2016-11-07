@@ -1,4 +1,8 @@
-"""
+"""HTML generated from data pulled from a database.
+
+In this example we're pulling data from a simple sqlite3 database and
+building an HTML template with it.
+
 Requirements:
  * A database created with some data about authors inside.
 """
