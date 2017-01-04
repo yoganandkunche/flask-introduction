@@ -7,6 +7,19 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def hello_world():
     if request.method == 'GET':
-        return render_template('simple_form.html')
+        return render_template('forms/basic_form.html')
     elif request.method == 'POST':
-        return "Submitted title: {}".format(request.form['title'])
+        kwargs = {
+            'title': request.form['title'],
+            'isbn': request.form['isbn'],
+            'author': request.form['author'],
+            'secret_key': request.form['SECRET_KEY'],
+            'submit_value': request.form['submit'],
+        }
+        return render_template(
+            'forms/basic_form_result.html', **kwargs)
+        # return render_template(
+        #     'forms/basic_form_result.html',
+        #     title=request.form['title'],
+        #     isbn=request.form['isbn'],
+        #     author=request.form['author'])

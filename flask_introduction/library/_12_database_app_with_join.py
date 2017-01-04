@@ -26,4 +26,4 @@ def hello_world():
     """)
     authors = [dict(id=row[0], name=row[1], country=row[2])
                for row in cursor.fetchall()]
-    return render_template('authors_with_join.html', authors=authors)
+    return render_template('database/authors_with_join.html', authors=authors)

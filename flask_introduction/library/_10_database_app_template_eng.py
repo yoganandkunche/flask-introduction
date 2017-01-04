@@ -22,4 +22,4 @@ def before_request():
 def hello_world():
     cursor = g.db.execute('SELECT id, name FROM author;')
     authors = [dict(id=row[0], name=row[1]) for row in cursor.fetchall()]
-    return render_template('authors_template_engine.html', authors=authors)
+    return render_template('database/authors_template_engine.html', authors=authors)
