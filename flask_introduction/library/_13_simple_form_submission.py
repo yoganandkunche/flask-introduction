@@ -18,8 +18,3 @@ def hello_world():
         }
         return render_template(
             'forms/basic_form_result.html', **kwargs)
-        # return render_template(
-        #     'forms/basic_form_result.html',
-        #     title=request.form['title'],
-        #     isbn=request.form['isbn'],
-        #     author=request.form['author'])

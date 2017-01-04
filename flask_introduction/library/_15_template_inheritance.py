@@ -12,7 +12,7 @@ def connect_db():
 @app.route('/', methods=['POST', 'GET'])
 def hello_world():
     if request.method == 'GET':
-        return render_template('form_with_template_inheritance.html')
+        return render_template('inheritance/child_template_form.html')
     elif request.method == 'POST':
         db = connect_db()
         sql_query = """
