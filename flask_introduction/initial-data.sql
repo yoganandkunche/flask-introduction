@@ -1,4 +1,4 @@
--- sqlite3 database.db < initial-data.sql
+-- sqlite3 library.db < initial-data.sql
 
 -- Countries
 INSERT INTO country (id, name) VALUES (1, 'United States');
