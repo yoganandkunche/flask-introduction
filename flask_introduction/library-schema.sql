@@ -1,4 +1,4 @@
--- sqlite3 database.db < library-schema.sql
+-- sqlite3 library.db < library-schema.sql
 
 drop table if exists country;
 create table country (
