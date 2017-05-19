@@ -1,0 +1,6 @@
+language: python
+python:
+  - "3.5"
+
+script:
+    - ./flask_introduction/run_app.py
